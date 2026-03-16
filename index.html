@@ -5,12 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
-
-
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -18,16 +15,19 @@
 	<div class="sidebar">
 
 		<div class="profile">
-			<h2>Maïli</h2>
+			<h2>Maïli </h2>
 			<p>Développeur Web</p>
 		</div>
 
-		<nav class="nav-menu">
-			<a href="#about">A propos</a>
-			<a href="#parcours">Parcours</a>
-			<a href="#competences">Compétences</a>
-			<a href="#projects">Projets</a>
-		</nav>
+		<nav>
+			<ul>
+				<li><a class="active" href="#home"><i class="fas fa-house"></i>  Accueil</a></li>
+				<li><a href="#about"><i class="fas fa-user"></i>  A propos</a></li>
+				<li><a href="#parcours"><i class="fas fa-road"></i>  Parcours</a></li>
+				<li><a href="#competences"><i class="fas fa-code"></i>  Compétences</a></li>
+				<li><a href="#projects"><i class="fas fa-folder"></i>  Projets</a></li>
+			</ul>
+		</nav>	
 
 	</div>
 
@@ -36,28 +36,80 @@
 	</video>
 
 	<div class="content">
+		<section id="home" class="section">
+			<div class="animation-container">
+				<svg class="animated-svg desktop-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300"
+					width="800" height="300">
+
+					<!--  Définition des styles directement dans le SVG pour garantir qu'ils s'appliquent  -->
+					<style>
+						@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+						.text-path {
+							fill: transparent;
+							stroke-dasharray: 2000;
+							stroke-dashoffset: 2000;
+							font-family: 'Comfortaa', 'Arial Rounded MT Bold', sans-serif;
+							text-anchor: middle;
+						}
+
+						.title {
+							font-size: 64px;
+							font-weight: bold;
+							stroke: var(--accent-color, rgb(45, 174, 88));
+							stroke-width: 2;
+							animation: draw 20s forwards, fill_title 1s forwards 3s;
+						}
+
+						.subtitle {
+							font-size: 24px;
+							stroke: var(--text-color, #ffffff);
+							stroke-width: 1;
+							animation: draw 20s forwards 2s, fill_subtitle 1s forwards 3s;
+						}
+
+						@keyframes draw {
+							to {
+								stroke-dashoffset: 0;
+							}
+						}
+
+						@keyframes fill_title {
+							from {
+								fill: transparent;
+							}
+
+							to {
+								fill: var(--accent-color, rgb(45, 174, 88));
+							}
+						}
+
+						@keyframes fill_subtitle {
+							from {
+								fill: transparent;
+							}
+
+							to {
+								fill: var(--text-color, #ffffff);
+							}
+						}
+					</style>
+					<text class="text-path title" x="400" y="150">Maïli GUERRY</text>
+					<text class="text-path subtitle" x="400" y="210">Etudiant en BTS SIO - Option SLAM</text>
+				</svg>
+			</div>
+
+		</section>
 		<canvas id="bg"></canvas>
 
-		<h1 id="hero-title">
-        <span>Mon</span>
-        <span>Portfolio</span>
-    </h1>
-
-    <p id="hero-subtitle">
-        <span>Bienvenue</span>
-        <span>sur</span>
-        <span>mon</span>
-        <span>site</span>
-    </p>
 	</div>
 
 	<div class="main-content">
-		<section id="about" class="container py-5">
+		<section id="about" class="section">
 			<h2>A propos de moi</h2>
 			<p>
-				Je suis un développeur passionné par la création de sites web et
-				d'expériences interactives. Ce portfolio présente mes projets,
-				compétences et expériences dans le domaine du développement web.
+				Je suis étudiante en deuxième année de BTS SIO (Services Informatiques aux Organisations) 
+				option SLAM au Lycée Léonard de Vinci à Melun.
 			</p>
 		</section>
 

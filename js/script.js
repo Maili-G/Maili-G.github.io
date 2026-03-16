@@ -10,32 +10,51 @@ if (video.readyState >= 1) {
     video.addEventListener("loadedmetadata", slowVideo);
 }
 
-function animateText(id, delay = 50) {
-    const element = document.getElementById(id);
-    const text = element.textContent;
-    element.textContent = "";
-
-    // Crée un span par lettre
-    for (let i = 0; i < text.length; i++) {
-        const span = document.createElement("span");
-        span.textContent = text[i];
-        span.style.animationDelay = `${i * delay}ms`;
-        element.appendChild(span);
-    }
+function typeText(element, text, speed = 80) {
+  return new Promise(resolve => {
+    let i = 0;
+    const interval = setInterval(() => {
+      element.textContent += text[i];
+      i++;
+      if (i >= text.length) {
+        clearInterval(interval);
+        resolve();
+      }
+    }, speed);
+  });
 }
 
+window.addEventListener("load", async () => {
+  const title    = document.getElementById("hero-title");
+  const subtitle = document.getElementById("hero-subtitle");
 
-window.addEventListener("load", () => {
+  await typeText(title, "Maïli", 120);
+  title.classList.add("done"); // stoppe le curseur sur le titre
 
-    const title = document.getElementById("hero-title");
-    const subtitle = document.getElementById("hero-subtitle");
+  await new Promise(r => setTimeout(r, 300)); // petite pause
 
-    setTimeout(() => {
-        title.classList.add("show");
-    }, 300);
+  await typeText(subtitle, "Développeur Web", 80);
+  // le curseur reste visible sur le subtitle à la fin
+});
 
-    setTimeout(() => {
-        subtitle.classList.add("show");
-    }, 900);
+// Met à jour le lien actif selon la section visible
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a");
 
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 200;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
 });

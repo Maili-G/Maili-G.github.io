@@ -1,33 +1,93 @@
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#0f172a;
-    color:white;
+body {
+    margin: 0;
+    font-family: 'Segoe UI' Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;
+    color: white;
 }
 
 #bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .content {
-  position: relative;
-  color: white;
-  text-align: center;
-  margin-top: 40vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    margin-left: 260px;
 }
 
-p, h2 {
+p, h2{
+    color: white;
+}
+
+.section h2 {
+    color: rgb(45, 174, 88) var(--accent-color);
+    /* margin-bottom: 2rem; */
+    font-size: 2.5rem;
+    /* position: relative;
+    padding-bottom: 0.5rem; */
+
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: rgb(45, 174, 88) var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Reset liste */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Lien de base */
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+/* Icône */
+nav a i {
+  font-size: 14px;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Hover */
+nav a:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.07);
   color: white;
+}
+
+/* Lien actif */
+nav a.active {
+  background: rgba(56, 248, 191, 0.13);
+  color: #38f8bf;
+  font-weight: 500;
 }
 
 /* menu gauche */
-.sidebar{
+.sidebar {
     position: fixed;
     left: 0;
     top: 0;
@@ -38,136 +98,63 @@ p, h2 {
     backdrop-filter: blur(10px);
     color: white;
     backdrop-filter: blur(10px);
-    border-right:1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 
     padding: 30px;
 }
 
 /* liens */
-.sidebar nav a{
-    display:block;
-    color:white;
-    text-decoration:none;
-    margin:15px 0;
-    font-size:18px;
-    transition:0.3s;
+.sidebar nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-.sidebar nav a:hover{
-    color:#38f8bf;
+.sidebar nav a:hover {
+    color: #38f8bf;
 }
 
 /* logo */
-.sidebar .logo{
-    margin-bottom:40px;
+.sidebar .logo {
+    margin-bottom: 40px;
 }
 
 /* profil */
 
-.profile h2{
-    margin:0;
-    font-size:28px;
+.profile h2 {
+    margin: 0;
+    font-size: 28px;
 }
 
-.profile p{
-    color:#94a3b8;
-    margin-bottom:40px;
-}
-
-/* menu */
-
-.nav-menu a{
-
-    display:block;
-    text-decoration:none;
-    color:#cbd5f5;
-
-    margin:15px 0;
-    font-size:18px;
-
-    position:relative;
-
-    transition:0.3s;
-}
-
-/* barre à gauche */
-
-.nav-menu a::before{
-
-    content:"";
-    position:absolute;
-    left:-20px;
-    top:50%;
-
-    width:8px;
-    height:2px;
-
-    background:#38f8bf;
-
-    transform:translateY(-50%);
-    opacity:0;
-
-    transition:0.3s;
-}
-
-/* hover moderne */
-
-.nav-menu a:hover{
-
-    color:white;
-    transform:translateX(10px);
-
-}
-
-.nav-menu a:hover::before{
-
-    opacity:1;
+.profile p {
+    color: #94a3b8;
+    margin-bottom: 40px;
 }
 
 /* contenu */
-.main-content{
-    margin-left:260px;
-    padding:60px;
+.main-content {
+    margin-left: 260px;
+    padding: 60px;
 }
 
 /* sections */
 
-section{
-    min-height:100vh;
+section {
+    min-height: 100vh;
 }
 
-/* animation texte accueil */
-
-#hero-title span,
-#hero-subtitle span{
-    opacity:0;
-    display:inline-block;
-    transform:translateY(40px);
-}
-
-/* animation active */
-
-.show span{
-    animation: titleReveal 0.8s ease forwards;
-}
-
-/* décalage entre les mots */
-
-.show span:nth-child(1){ animation-delay:0.2s; }
-.show span:nth-child(2){ animation-delay:0.4s; }
-.show span:nth-child(3){ animation-delay:0.6s; }
-.show span:nth-child(4){ animation-delay:0.8s; }
-
-@keyframes titleReveal{
-
-    0%{
-        opacity:0;
-        transform:translateY(40px);
+@keyframes blink {
+    50% {
+        border-color: transparent;
     }
+}
 
-    100%{
-        opacity:1;
-        transform:translateY(0);
-    }
-
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
