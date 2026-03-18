@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -16,18 +17,21 @@
 
 		<div class="profile">
 			<h2>Maïli </h2>
-			<p>Développeur Web</p>
+			<p>Développeuse Web</p>
 		</div>
 
 		<nav>
 			<ul>
-				<li><a class="active" href="#home"><i class="fas fa-house"></i>  Accueil</a></li>
-				<li><a href="#about"><i class="fas fa-user"></i>  A propos</a></li>
-				<li><a href="#parcours"><i class="fas fa-road"></i>  Parcours</a></li>
-				<li><a href="#competences"><i class="fas fa-code"></i>  Compétences</a></li>
-				<li><a href="#projects"><i class="fas fa-folder"></i>  Projets</a></li>
+				<li><a class="active" href="#home"><i class="fas fa-house"></i> Accueil</a></li>
+				<li><a href="#about"><i class="fas fa-user"></i> A propos</a></li>
+				<li><a href="#sio"><i class=" fas fa-graduation-cap"></i> BTS SIO</a></li>
+				<li><a href="#parcours"><i class="fas fa-road"></i> Parcours</a></li>
+				<li><a href="#competences"><i class="fas fa-code"></i> Compétences</a></li>
+				<li><a href="#projects"><i class="fas fa-folder"></i> Projets</a></li>
+				<li><a href="#veille"><i class="fas fa-search"></i> Veille Technologique</a></li>
+
 			</ul>
-		</nav>	
+		</nav>
 
 	</div>
 
@@ -95,9 +99,12 @@
 						}
 					</style>
 					<text class="text-path title" x="400" y="150">Maïli GUERRY</text>
-					<text class="text-path subtitle" x="400" y="210">Etudiant en BTS SIO - Option SLAM</text>
+					<text class="text-path subtitle" x="400" y="210">Etudiante en BTS SIO - Option SLAM</text>
 				</svg>
 			</div>
+			<!-- <button id="replay-animation" class="replay-animation" aria-label="Rejouer l'animation">
+				<i class="fas fa-redo-alt"></i>
+			</button> -->
 
 		</section>
 		<canvas id="bg"></canvas>
@@ -108,9 +115,77 @@
 		<section id="about" class="section">
 			<h2>A propos de moi</h2>
 			<p>
-				Je suis étudiante en deuxième année de BTS SIO (Services Informatiques aux Organisations) 
-				option SLAM au Lycée Léonard de Vinci à Melun.
+				Je suis étudiante en deuxième année de BTS SIO (Services Informatiques aux Organisations)
+				option SLAM au Lycée Léonard de Vinci à Melun.<br>
+				Découverte par hasard du BTS SIO, je me suis vite pris de passion pour le développement.
 			</p>
+		</section>
+
+		<section id="sio" class="section">
+			<h2>Le BTS SIO</h2>
+
+			<div class="options-container">
+				<div class="option-card">
+					<div class="option-header">
+						<i class="fas fa-code"></i>
+						<h3>Option SLAM</h3>
+					</div>
+					<div class="option-content">
+						<p><strong>Logicielles et Applications Métiers</strong></p>
+						<p>
+							Le BTS option SISR permet d'acquérir des compétences dans trois domaines d'activité
+							:<br><br>
+							<i class="fas fa-angle-right"></i>
+							Support et mise à disposition de services informatiques<br>
+							<i class="fas fa-angle-right"></i>
+							Administration des systèmes et des réseaux<br>
+							<i class="fas fa-angle-right"></i>
+							Cybersécurité des services informatiques<br>
+						</p>
+						<p>
+							Débouchés professionnels<br><br>
+							<i class="fas fa-angle-right"></i>
+							Administrateur systèmes et réseaux<br>
+							<i class="fas fa-angle-right"></i>
+							Technicien support<br>
+							<i class="fas fa-angle-right"></i>
+							Responsable infrastructure<br>
+						</p>
+					</div>
+				</div>
+
+				<div class="option-card">
+					<div class="option-header">
+						<i class="fas fa-network-wired"></i>
+						<h3>Option SISR</h3>
+					</div>
+					<div class="option-content">
+						<p><strong>Solutions d'Infrastructure, Systèmes et Réseaux</strong></p>
+						<p>
+							Le BTS SIO option SLAM permet d'acquérir des compétences dans trois domaines d'activité :
+							<br><br>
+							<i class="fas fa-angle-right"></i>
+							Support et mise à disposition de services informatiques<br>
+							<i class="fas fa-angle-right"></i>
+							Conception et développement d'applications<br>
+							<i class="fas fa-angle-right"></i>
+							Cybersécurité des services informatiques<br>
+						</p>
+						<p>
+							Débouchés professionnels<br><br>
+							<i class="fas fa-angle-right"></i>
+							Développeur d'applications<br>
+							<i class="fas fa-angle-right"></i>
+							Programmeur analyste<br>
+							<i class="fas fa-angle-right"></i>
+							Développeur Web<br>
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+
 		</section>
 
 		<section id="parcours" class="section">
@@ -121,6 +196,7 @@
 						<i class="fas fa-graduation-cap"></i>
 						Parcours scolaire
 					</h3>
+
 					<div class="timeline">
 						<div class="timeline-item">
 							<div class="timeline-date">
@@ -135,60 +211,329 @@
 									<span class="highlight">Solutions Logicielles et Applications Métiers</span>
 								</p>
 								<p>
-									Lycée 
+									Lycée
 									<span class="highlight">Léonard de Vinci</span>
+									, Melun, Ile-de-France
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="timeline">
+						<div class="timeline-item">
+							<div class="timeline-date">
+								Sept 2021 - Mai 2022
+							</div>
+							<div class="timeline-content">
+								<h3>Licence Sciences du Langage</h3>
+								<p>
+									Etudiante en première année de
+									<span class="highlight">Licence</span>
+								</p>
+								<p>
+									Université
+									<span class="highlight">Paris Cité</span>
+									, Boulogne-Billancourt, Ile-de-France
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="timeline">
+						<div class="timeline-item">
+							<div class="timeline-date">
+								Sept 2020 - Juil 2021
+							</div>
+							<div class="timeline-content">
+								<h3>Bac Général et Technologique</h3>
+								<p>
+									Baccalauréat
+									<span class="highlight">Général et Technologique</span>
+									, Spécialités
+									<span class="highlight">Mathématiques </span>
+									et
+									<span class="highlight">Physique-Chimie</span>
+								</p>
+								<p>
+									Lycée
+									<span class="highlight">Jacques Amyot</span>
 									, Melun, Ile-de-France
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="parcours-column">
 					<h3>
 						<i class="fas fa-briefcase"></i>
-						Parcours scolaire
+						Parcours professionnel
 					</h3>
+
 					<div class="timeline">
 						<div class="timeline-item">
 							<div class="timeline-date">
-								Sept 2024 - Aujourd'hui
+								Janv 2026 - Fév 2026
 							</div>
 							<div class="timeline-content">
-								<h3>BTS SIO - Option SLAM</h3>
+								<h3>Stage de deuxième année de BTS SIO</h3>
 								<p>
-									BTS
-									<span class="highlight">Services Informatiques aux Organisations</span>
-									, Option
-									<span class="highlight">Solutions Logicielles et Applications Métiers</span>
+									Développement d'un service "
+									<span class="highlight">OctoClimate</span>
+									" en Python qui a pour principales fonctionnalités l'édition de climat, le stockage
+									de climat, la génération de climat, la récupération de données climatiques avec leur
+									enregistrement
+									grâce à une interface web
 								</p>
 								<p>
-									Lycée 
-									<span class="highlight">Léonard de Vinci</span>
-									, Melun, Ile-de-France
+									<span class="highlight">CEREEP-Ecotron</span>
+									, Saint-Pierre-lès-Nemours, Ile-de-France
 								</p>
 							</div>
 						</div>
 					</div>
+
+					<div class="timeline">
+						<div class="timeline-item">
+							<div class="timeline-date">
+								Juil 2025 - Août 2025
+							</div>
+							<div class="timeline-content">
+								<h3>Hôtesse d'entretien</h3>
+								<p>
+									CDD 35h - Entretient de la voirie et des terrasses du parc Walt Disney Studios
+								</p>
+								<p>
+									<span class="highlight">Disneyland Paris</span>
+									, Chessy, Ile-de-France
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="timeline">
+						<div class="timeline-item">
+							<div class="timeline-date">
+								Mai 2025 - Juin 2025
+							</div>
+							<div class="timeline-content">
+								<h3>Stage de première année de BTS SIO</h3>
+								<p>
+									Mise en réseaux des stands pour les exposants
+								</p>
+								<p>
+									<span class="highlight">AS - Réseaux</span>
+									, Palais des Congrès, Paris, Ile-de-France
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="timeline">
+						<div class="timeline-item">
+							<div class="timeline-date">
+								Juin 2022 - Août 2023
+							</div>
+							<div class="timeline-content">
+								<h3>Conseillère Vendesue Polyvalente</h3>
+								<p>
+									CDD 35h / CDI 10h à partir de Janv 2023 - Conseil et aide à la clientèle,
+									hotêsse de caisse, réception et traitement des livraisons et retouches.
+								</p>
+								<p>
+									<span class="highlight">Brice by Jules</span>
+									, Carré Sénart, Lieusaint, Ile-de-France
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="timeline">
+						<div class="timeline-item">
+							<div class="timeline-date">
+								Sept 2023 - Mai 2024
+							</div>
+							<div class="timeline-content">
+								<h3>Conseillère Vendesue Polyvalente</h3>
+								<p>
+									CDI 35h - Conseil et aide à la clientèle, hotêsse de caisse,
+									réception et traitement des livraisons et merchandising.
+								</p>
+								<p>
+									<span class="highlight">Brice by Jules</span>
+									, Carré Sénart, Lieusaint, Ile-de-France
+								</p>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</section>
 
 		<section id="competences" class="section">
 			<h2>Compétences</h2>
-			<p>
-				Je suis un développeur passionné par la création de sites web et
-				d'expériences interactives. Ce portfolio présente mes projets,
-				compétences et expériences dans le domaine du développement web.
-			</p>
+			<div class="skills-wrapper">
+
+				<!-- Développement -->
+				<div class="skill-category">
+					<h3>
+						<i class="fas fa-code"></i>
+						Développement Web et App
+					</h3>
+					<div class="skills-gird">
+						<div class="skill-card">
+							<i class="fab fa-html5 skill-icon"></i>
+							<span class="skill-name">HTML5</span>
+						</div>
+
+						<div class="skill-card">
+							<i class="fab fa-css3 skill-icon"></i>
+							<span class="skill-name">CSS3</span>
+						</div>
+
+						<div class="skill-card">
+							<i class="fab fa-php skill-icon"></i>
+							<span class="skill-name">PHP</span>
+						</div>
+
+						<div class="skill-card">
+							<i class="fab fa-python skill-icon"></i>
+							<span class="skill-name">Python</span>
+						</div>
+
+						<div class="skill-card">
+							<i class="fab fa-js skill-icon"></i>
+							<span class="skill-name">JavaScript</span>
+						</div>
+
+						<div class="skill-card">
+							<i class="fa fa-database skill-icon"></i>
+							<span class="skill-name">SQL</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Frameworks et bibliothèques -->
+				<div class="skill-category">
+					<h3>
+						<i class="fas fa-code"></i>
+						Frameworks & Bibliothèques
+					</h3>
+					<div class="skills-gird">
+						<div class="skill-card">
+							<i class="fas fa-leaf skill-icon"></i>
+							<span class="skill-name">Spring Boot</span>
+						</div>
+
+						<div class="skill-card">
+							<i class="fab fa-angular skill-icon"></i>
+							<span class="skill-name">Angular</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Outils et environnement -->
+				<div class="skill-category">
+					<h3>
+						<i class="fas fa-code"></i>
+						Outils et Environnement
+					</h3>
+					<div class="skills-gird">
+						<div class="skill-card">
+							<i class="fas fa-code-branch skill-icon"></i>
+							<span class="skill-name">Git & GitHub</span>
+						</div>
+
+						<div class="skill-card">
+							<i class="fas fa-terminal skill-icon"></i>
+							<span class="skill-name">VS Code</span>
+						</div>
+
+						<div class="skill-card">
+							<i class="fas fa-laptop-code skill-icon"></i>
+							<span class="skill-name">IntelliJ</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</section>
 
 		<section id="projects" class="section">
 			<h2>Projets</h2>
-			<p>
-				Je suis un développeur passionné par la création de sites web et
-				d'expériences interactives. Ce portfolio présente mes projets,
-				compétences et expériences dans le domaine du développement web.
-			</p>
+			<div class="skill-category">
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name "><a
+								href="https://github.com/Maili-G/Web_Livre_Edition">E-commerce</a></span>
+					</div>
+				</div>
+
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name"><a href="https://github.com/Maili-G/sav-app">Savon-app</a></span>
+					</div>
+				</div>
+
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name"><a href="https://github.com/Maili-G/OctoClim">OctoClimate</a></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="veille" class="section">
+			<h2>Veille Technologique</h2>
+			<div class="skill-category">
+				<h3>
+					Quelle place occupe l'IA au sein du développement des jeux vidéos ?
+				</h3>
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name "><a
+								href=" https://www.globant.com/fr/tech-terms/ia-dans-jeu-video ">Globant</a></span>
+					</div>
+				</div>
+
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name"><a
+								href=" https://bigmedia.bpifrance.fr/nos-dossiers/comment-lia-revolutionne-t-elle-les-jeux-video ">BIG
+								Média</a></span>
+					</div>
+				</div>
+
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name"><a
+								href=" https://www.nexa.fr/blog/comprendre-lintelligence-artificielle-dans-les-jeux-videos ">NEXA</a></span>
+					</div>
+				</div>
+
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name"><a
+								href=" https://leyton.com/ca/insights/articles/creer-des-mondes-virtuels-comment-lia-generative-revolutionne-le-developpement-de-jeux-video/ ">Leyton</a></span>
+					</div>
+				</div>
+
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name"><a
+								href=" https://www.wildcodeschool.com/blog/comment-lia-bouleverse-lindustrie-du-jeu-vid%C3%A9o ">Wild
+								Code School</a></span>
+					</div>
+				</div>
+
+				<div class="skills-gird">
+					<div class="skill-card">
+						<span class="skill-name"><a
+								href=" https://www.intefp.travail-emploi.gouv.fr/fr/node/1633 ">Intefp</a></span>
+					</div>
+				</div>
+			</div>
 		</section>
 	</div>
 
